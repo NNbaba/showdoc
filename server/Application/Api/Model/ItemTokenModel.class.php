@@ -8,6 +8,10 @@ use Api\Model\BaseModel;
 class ItemTokenModel extends BaseModel {
 
 	public function createToken($item_id){
+
+		
+
+
 		$api_key = md5(md5($item_id.microtime().rand()."showdoc")."srffsrfgr".rand()).rand();
 		$api_token = md5(md5($item_id.microtime().rand()."showdoc")."rgrhbtgd34".rand()).rand();
 		$data['item_id'] = $item_id ;
